@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import models.Hero;
 import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
@@ -79,6 +80,19 @@ public class App {
             int idOfSquadToDelete = Integer.parseInt(request.params("id"));
             Squad deleteSquad = Squad.findById(idOfSquadToDelete);
             deleteSquad.deleteSquad();
+            return new ModelAndView(model, "success.hbs");
+
+        }), new HandlebarsTemplateEngine());
+
+        //get: Process form to add a new Hero
+        post("/heroes/new", ((request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String name = request.queryParams("name");
+            int age= Integer.parseInt(request.queryParams("age"));
+            String specialPower = request.queryParams("specialPower");
+            String weakness = request.queryParams("weakness");
+
+            Hero newHero = new Hero(name,age, specialPower, weakness);
             return new ModelAndView(model, "success.hbs");
 
         }), new HandlebarsTemplateEngine());
