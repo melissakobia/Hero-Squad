@@ -7,16 +7,18 @@ public class Squad {
     private String cause;
     private int maxSize;
     private static ArrayList<Squad> instances = new ArrayList<>();
+    private int id;
 
     public Squad(String squadName, String cause, int maxSize) {
         this.squadName = squadName;
         this.cause = cause;
         this.maxSize = maxSize;
         instances.add(this);
+        this.id = instances.size();
 
     }
 
-    public String getsquadName() {
+    public String getSquadName() {
         return squadName;
     }
 
@@ -34,5 +36,9 @@ public class Squad {
 
     public static void clearAllSquads(){
         instances.clear();
+    }
+
+    public int getId() {
+        return id;
     }
 }

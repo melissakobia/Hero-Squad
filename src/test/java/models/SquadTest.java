@@ -18,7 +18,7 @@ public class SquadTest {
     @Test
     public void SquadInstantiatesWithName_true() throws Exception {
         Squad mySquad = new Squad("Peace Makers", "Peace",3 );
-        assertEquals("Peace Makers", mySquad.getsquadName());
+        assertEquals("Peace Makers", mySquad.getSquadName());
     }
 
     @Test
@@ -55,5 +55,12 @@ public class SquadTest {
         assertTrue(Squad.getAll().contains(mySquad));
         assertTrue(Squad.getAll().contains(otherSquad));
 
+    }
+
+    @Test
+    public void getId_squadInstantiatesWithAnID_1() throws Exception {
+        Squad.clearAllSquads();
+        Squad mySquad = new Squad("Peace Makers", "Peace",5 );
+        assertEquals(1, mySquad.getId());
     }
 }
