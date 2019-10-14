@@ -98,4 +98,14 @@ public class SquadTest {
         assertNotEquals(formerCause, mySquad.getCause());
         assertNotEquals(formerMaxSize, mySquad.getMaxSize());
     }
+
+    @Test
+    public void deleteDeleteSpecificSquad() throws Exception {
+        Squad mySquad = new Squad("Peace Makers", "Peace",5);
+        Squad otherSquad = new Squad("Peace Makers", "Peace",3);
+
+        mySquad.deleteSquad();
+        assertEquals(1, Squad.getAll().size());
+        assertEquals(Squad.getAll().get(0).getId(), 2);
+    }
 }
