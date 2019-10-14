@@ -43,6 +43,14 @@ public class App {
             return new ModelAndView(model, "view-squad.hbs");
         }), new HandlebarsTemplateEngine());
 
+        get("/squads/:id", ((request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            int squadID = Integer.parseInt(request.params(":id"));
+            Squad foundSquad = Squad.findById(squadID);
+            model.put("squad", foundSquad);
+            return new ModelAndView(model, "heroes.hbs");
+        }), new HandlebarsTemplateEngine());
+
 
 
 
