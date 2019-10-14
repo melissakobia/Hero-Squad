@@ -73,6 +73,16 @@ public class App {
             return new ModelAndView(model,"success.hbs");
         }), new HandlebarsTemplateEngine());
 
+        //get:Deletes squads
+        get("/squads/:id/delete", ((request, response) -> {
+            Map<String,Object> model = new HashMap<>();
+            int idOfSquadToDelete = Integer.parseInt(request.params("id"));
+            Squad deleteSquad = Squad.findById(idOfSquadToDelete);
+            deleteSquad.deleteSquad();
+            return new ModelAndView(model, "success.hbs");
+
+        }), new HandlebarsTemplateEngine());
+
 
     }
 }
