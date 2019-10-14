@@ -41,4 +41,8 @@ public class Squad {
     public int getId() {
         return id;
     }
+
+    public static Squad findById(int id) {
+        return instances.get(id-1);
+    }
 }

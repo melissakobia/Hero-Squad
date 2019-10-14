@@ -63,4 +63,17 @@ public class SquadTest {
         Squad mySquad = new Squad("Peace Makers", "Peace",5 );
         assertEquals(1, mySquad.getId());
     }
+
+    @Test
+    public void findReturnsCorrectSquad() throws Exception {
+        Squad mySquad = new Squad("Peace Makers", "Peace",5);
+        assertEquals(1, Squad.findById(mySquad.getId()).getId());
+    }
+
+    @Test
+    public void findReturnsCorrectSquadWhenMoreThanOneSquadExists_2() throws Exception {
+        Squad mySquad = new Squad("Peace Makers", "Peace",5);
+        Squad otherSquad = new Squad("Peace Makers", "Peace",3);
+        assertEquals(2, Squad.findById(otherSquad.getId()).getId() );
+    }
 }
