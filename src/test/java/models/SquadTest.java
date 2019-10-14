@@ -4,8 +4,7 @@ package models;
 import org.junit.After;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class SquadTest {
     @Test
@@ -74,6 +73,29 @@ public class SquadTest {
     public void findReturnsCorrectSquadWhenMoreThanOneSquadExists_2() throws Exception {
         Squad mySquad = new Squad("Peace Makers", "Peace",5);
         Squad otherSquad = new Squad("Peace Makers", "Peace",3);
-        assertEquals(2, Squad.findById(otherSquad.getId()).getId() );
+        assertEquals(2, Squad.findById(otherSquad.getId()).getId());
+    }
+
+    @Test
+    public void updateChangesSquadsquadName() throws Exception {
+        Squad mySquad = new Squad("Peace Makers", "Peace",5);
+        String formerSquadName = mySquad.getSquadName();
+        int formerId = mySquad.getId();
+        mySquad.update("Life-guards", "HR", 5);
+        assertEquals(formerId,mySquad.getId());
+        assertNotEquals(formerSquadName, mySquad.getSquadName());
+    }
+
+    @Test
+    public void updateChangesSquad() throws Exception {
+        Squad mySquad = new Squad("Peace Makers", "Peace",5);
+        String formerSquadName = mySquad.getSquadName();
+        String formerCause = mySquad.getCause();
+        int formerMaxSize = mySquad.getMaxSize();
+        int formerId = mySquad.getId();
+        mySquad.update("Life-guards", "Human Rights",3);
+        assertEquals(formerId, mySquad.getId());
+        assertNotEquals(formerCause, mySquad.getCause());
+        assertNotEquals(formerMaxSize, mySquad.getMaxSize());
     }
 }

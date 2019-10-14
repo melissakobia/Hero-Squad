@@ -45,4 +45,10 @@ public class Squad {
     public static Squad findById(int id) {
         return instances.get(id-1);
     }
+
+    public void update(String squadName, String cause , int maxSize) {
+        this.squadName = squadName;
+        this.cause = cause;
+        this.maxSize = maxSize;
+    }
 }
