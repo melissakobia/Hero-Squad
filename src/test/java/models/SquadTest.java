@@ -21,8 +21,14 @@ public class SquadTest {
     }
 
     @Test
-    public void mySquadGetsCause() throws Exception {
+    public void mySquadGetsCause_Peace() throws Exception {
         Squad mySquad = new Squad("Peace Makers", "Peace",3 );
         assertEquals( "Peace", mySquad.getCause());
+    }
+
+    @Test
+    public void mySquadGetsMaxSize_3() throws Exception {
+        Squad mySquad = new Squad("Peace Makers", "Peace",3 );
+        assertEquals(3,mySquad.getMaxSize());
     }
 }
