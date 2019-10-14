@@ -51,4 +51,8 @@ public class Squad {
         this.cause = cause;
         this.maxSize = maxSize;
     }
+
+    public void deleteSquad(){
+        instances.remove(id-1);
+    }
 }
