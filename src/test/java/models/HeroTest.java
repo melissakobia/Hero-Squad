@@ -8,12 +8,21 @@ import static org.junit.Assert.*;
 public class HeroTest {
     @Test
     public void HeroInstantiatesCorrectly_true() throws Exception {
-        Hero myHero = new Hero("CatWoman", 23, "Climbing", "Dogs");
+//        Squad mysquad = new Squad("Peace Makers", "Peace",3 );
+        Hero myHero = new Hero("CatWoman", 23, "Climbing", "Dogs", 1);
         assertTrue(true);
     }
 
     public Hero setUpNewHero() {
-        return new Hero("CatWoman", 23, "Climbing", "Dogs");
+
+        return new Hero("CatWoman", 23, "Climbing", "Dogs", 1);
+    }
+
+    @Test
+    public void addHeroToSquad() {
+        Squad squad = new Squad("sdfsdf","as",12);
+        Hero hero = setUpNewHero();
+        assertTrue(true);
     }
 
     @Test
@@ -61,4 +70,5 @@ public class HeroTest {
         assertTrue(Hero.getAll().contains(otherHero));
 
     }
+
 }
