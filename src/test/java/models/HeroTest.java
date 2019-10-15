@@ -40,5 +40,25 @@ public class HeroTest {
         assertEquals("Dogs", myHero.getWeakness());
     }
 
+    @After
+    public void tearDown() throws Exception {
+        Hero.clearAllHeroes();
 
+    }
+
+    @Test
+    public void AllHeroesAreCorrectlyReturned_2() {
+        Hero myHero = setUpNewHero();
+        Hero otherHero = setUpNewHero();
+        assertEquals(2, Hero.getAll().size());
+    }
+
+    @Test
+    public void AllHeroesContainsAllHeroes() {
+        Hero myHero = setUpNewHero();
+        Hero otherHero = setUpNewHero();
+        assertTrue(Hero.getAll().contains(myHero));
+        assertTrue(Hero.getAll().contains(otherHero));
+
+    }
 }
