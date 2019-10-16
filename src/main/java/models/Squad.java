@@ -1,13 +1,17 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Squad {
     private String squadName;
     private String cause;
     private int maxSize;
+    private List<Hero> squadMembers = new ArrayList<>();
     private static ArrayList<Squad> instances = new ArrayList<>();
     private int id;
+
+
 
     public Squad(String squadName, String cause, int maxSize) {
         this.squadName = squadName;
@@ -16,6 +20,14 @@ public class Squad {
         instances.add(this);
         this.id = instances.size();
 
+    }
+
+    public void addMember(Hero hero){
+        squadMembers.add(hero);
+    }
+
+    public List<Hero> getSquadMembers() {
+        return squadMembers;
     }
 
     public String getSquadName() {
@@ -55,4 +67,6 @@ public class Squad {
     public void deleteSquad(){
         instances.remove(id-1);
     }
+
+
 }

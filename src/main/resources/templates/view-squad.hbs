@@ -14,7 +14,7 @@
                            <div class="view view-cascade gradient-card-header purple-gradient text-center">
 
                                <!-- Title -->
-                               <h2 class="card-header-title mb-3">{{squadName}}</h2>
+                               <h2 class="card-header-title mb-3">Squad {{squadName}}</h2>
 
 
                            </div>
@@ -30,8 +30,8 @@
                                <div class="d-flex card-menu">
                                    <a href="/squads/{{id}}/delete" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>Delete</a>
                                    <a href="/squads/{{id}}/update" class="btn btn-sm btn-success"><i class="fa fa-pencil-alt"></i>Edit</a>
-                                   <a href="/squads/{{id}}" class="btn btn-sm btn-flat">View Heroes</a>
-                                   <a href="#!" class="btn btn-sm btn-outline-secondary waves-effect">Add a hero</a>
+                                   <a href="/squads/{{id}}/heroes" class="btn btn-sm btn-flat">View Heroes</a>
+                                   <a href="/squads/{{id}}/heroes/new" class="btn btn-sm btn-outline-secondary waves-effect">Add a hero</a>
                                </div>
 
 

@@ -9,6 +9,7 @@ jobs:
      branches:
        only: master
              squad
+             hero
 
     docker:
       # specify the version you desire here
