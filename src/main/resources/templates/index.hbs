@@ -1,52 +1,89 @@
 {{#partial "content"}}
-    <div class="view">
-        <div class="row main">
-
-            <div class="col-md-12">
-
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <h1 class="heading display-3">HERO SQUAD</h1>
-                    <h4 class="subheading font-weight-bold">Welcome to Hero Squad, a fun app to team up your favourites heroes and get to fight for a cause of your choice.</h4>
-                    <p class="font-weight-bold purple-text py-2"><i class="fas fa-quote-left"></i> Not all heroes wear capes. <i class="fas fa-quote-right"></i></p>
-                    <div class="mr-auto align-items-center">
-                        <a href="/squads" class="btn btn-outline-secondary btn-rounded waves-effect" role="button">View Squads</a>
-                        <a href="/squad/new" class="btn btn-outline-secondary btn-rounded waves-effect" role="button">Add Squad</a>
+    <div class="card card-cascade wider reverse">
+        <div class="view view-cascade">
+            <!--Carousel Wrapper-->
+            <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="view">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                                 alt="First slide">
+                            <div class="mask rgba-black-light"></div>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="h3-responsive">Light mask</h3>
+                            <p>First text</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!--Mask color-->
+                        <div class="view">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                                 alt="Second slide">
+                            <div class="mask rgba-black-strong"></div>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="h3-responsive">Strong mask</h3>
+                            <p>Secondary text</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <!--Mask color-->
+                        <div class="view">
+                            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                                 alt="Third slide">
+                            <div class="mask rgba-black-slight"></div>
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="h3-responsive">Slight mask</h3>
+                            <p>Third text</p>
+                        </div>
                     </div>
                 </div>
-
+                <!--/.Slides-->
+                <!--Controls-->
+                <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <!--/.Controls-->
             </div>
+            <!--/.Carousel Wrapper-->
+        </div>
+
+
+        <div class="card-body card-body-cascade text-center">
+
+            <!-- Title -->
+            <h4 class="card-title"><strong>HERO SQUAD</strong></h4>
+            <!-- Subtitle -->
+            <h6 class="font-weight-bold indigo-text py-2">Not all heroes wear capes.</h6>
+            <!-- Text -->
+
+            <p class="card-text"> Welcome to Hero Squad, a fun app to team up your favourites heroes and get to fight for a cause of your choice.
+            </p>
+
+            <a href="/squads" class="btn btn-outline-secondary btn-rounded waves-effect" role="button">View Squads</a>
+            <a href="/squad/new" class="btn btn-outline-secondary btn-rounded waves-effect" role="button">Add Squad</a>
 
 
         </div>
 
     </div>
-
-
-
-<!--    <div class="card card-cascade wider reverse">-->
-
-
-
-<!--        <div class="card-body card-body-cascade text-center">-->
-
-<!--            &lt;!&ndash; Title &ndash;&gt;-->
-<!--            <h1 class="card-title"><strong>HERO SQUAD</strong></h1>-->
-<!--            &lt;!&ndash; Subtitle &ndash;&gt;-->
-<!--            <h2 class="font-weight-bold purple-text py-2">Not all heroes wear capes.</h2>-->
-<!--            &lt;!&ndash; Text &ndash;&gt;-->
-
-<!--            <p class="card-text"> Welcome to Hero Squad, a fun app to team up your favourites heroes and get to fight for a cause of your choice.-->
-<!--            </p>-->
-
-<!--            <a href="/squads" class="btn btn-outline-secondary btn-rounded waves-effect" role="button">View Squads</a>-->
-<!--            <a href="/squad/new" class="btn btn-outline-secondary btn-rounded waves-effect" role="button">Add Squad</a>-->
-
-
-<!--        </div>-->
-
-<!--    </div>-->
-<!--    &lt;!&ndash; Card &ndash;&gt;-->
-<!--    </div>-->
+    <!-- Card -->
+    </div>
 
 
 
