@@ -2,28 +2,32 @@
   padding-top : 5%;
 }
 
-.rainbow-card:before {
-  height: 4px;
-  width: 100%;
-  content: "";
-  background: linear-gradient(270deg,#6f42c1 7.1%,#0366d6 28.4%,#28a745 42.6%,#ffd33d 56.8%,#f66a0a 71%,#d73a49 92.9%,#6f42c1);
-  background-size: 200% 100%;
-  animation: rainbow 4s linear infinite;
-  border-radius: .25rem .25em 0 0;
+.hm-gradient {
+  background: linear-gradient(40deg, rgba(0,51,199,.3), rgba(209,149,249,.3));
+}
+.heading {
+  margin: 0 6rem;
+  font-weight: 700;
+  color: #5d4267;
+}
+.subheading {
+  margin: 2.5rem 6rem;
+  color: #bcb2c0;
 }
 
-.card-menu {
-  justify-content: flex-end;
+.title {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  color: #5d4267;
+}
+.subtitle {
+  color: #bcb2c0;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 6rem;
 }
 
-@keyframes rainbow {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-      background-position: -100% 0;
-  }
-  100% {
-      background-position: -200% 0;
-  }
+#myBtn {
+    padding:5%;
+    align:center;
 }
