@@ -63,11 +63,11 @@ public class SquadTest {
         assertEquals(1, mySquad.getId());
     }
 
-    @Test
-    public void findReturnsCorrectSquad() throws Exception {
-        Squad mySquad = new Squad("Peace Makers", "Peace",5);
-        assertEquals(1, Squad.findById(mySquad.getId()).getId());
-    }
+//    @Test
+//    public void findReturnsCorrectSquad() throws Exception {
+//        Squad mySquad = new Squad("Peace Makers", "Peace",5);
+//        assertEquals(1, Squad.findById(mySquad.getId()).getId());
+//    }
 
     @Test
     public void findReturnsCorrectSquadWhenMoreThanOneSquadExists_2() throws Exception {
