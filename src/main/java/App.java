@@ -11,6 +11,16 @@ import static spark.Spark.*;
 public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
+        ProcessBuilder process = new ProcessBuilder();
+        int port;
+
+        if (process.environment().get("PORT") != null) {
+            port = Integer.parseInt(process.environment().get("PORT"));
+        } else {
+            port = 4567;
+        }
+        port(port);
+
 
         //Dispalys the homepage
         get("/", ((request, response) -> {
@@ -53,11 +63,6 @@ public class App {
             Squad foundSquad = Squad.findById(squadID);
             //ArrayList<Hero> heroes = Squad.get;
             model.put("squad", foundSquad);
-
-
-           /* if(heroes.size() > foundSquad.getMaxSize()){
-                return new ModelAndView(model, "index.hbs");
-            }*/
 
             return new ModelAndView(model, "view-squad-details.hbs");
         }), new HandlebarsTemplateEngine());
@@ -110,15 +115,9 @@ public class App {
             String weakness = request.queryParams("weakness");
             int squadID = Integer.parseInt(request.params(":id"));
 //            Squad foundSquad = Squad.findById(squadID);
-//
+
             Hero newHero = new Hero(name,age, specialPower, weakness, squadID);
-//
-//            if(!newHero.isHeroLimit()) {
-//                return new ModelAndView(model, "index.hbs");
-//            }
-//            else {
-//                return new ModelAndView(model, "success.hbs");
-//            }
+
             return new ModelAndView(model, "success.hbs");
 
 
